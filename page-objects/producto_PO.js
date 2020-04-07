@@ -12,10 +12,13 @@ module.exports = {
     commands: [{
         clickPurchaseButton() {
             return this
-                .click('@purchaseButton');
+                .waitForElementVisible('@purchaseButton', 50000)
+                .click('@purchaseButton')
+                //.click('@purchaseButton');
         },
         clickContinuarCarritoButton() {
             return this
+                .waitForElementVisible('@continuarCarritoButton', 50000)
                 .click('@continuarCarritoButton');
         }
     }]
